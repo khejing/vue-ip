@@ -1,6 +1,6 @@
 {
   "name": "@willlee-work/vue-ip",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "./dist/vue-ip.min.js",
   "repository": "https://github.com/peteringram0/vue-ip",
   "author": "Peter Ingram <peter.ingram0@gmail.com>",

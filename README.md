@@ -1,3 +1,7 @@
+# 修改点
+1. focus时不清空
+2. 标点数字输入框旁边的上下箭头时，也要调用on-change
+
 # Vue IP
 A IP input component built for Vue 2.x
 

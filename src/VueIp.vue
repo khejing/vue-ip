@@ -3,7 +3,7 @@
         .label
             slot
         .segment(v-for="(segment, index) in ipCopy")
-            input(type="number", v-model="ipCopy[index]", :placeholder="placeholderPos(index)", maxlength="3", @paste="paste($event)", @keydown="ipKeydown($event, index)", @focus="ipFocus(index)", @blur="blur", ref="ipSegment")
+            input(type="number", v-model="ipCopy[index]", :placeholder="placeholderPos(index)", maxlength="3", @paste="paste($event)", @keydown="ipKeydown($event, index)", @focus="ipFocus(index)", @blur="blur", @change="changed()", ref="ipSegment")
         input(type="number", v-show="portCopy !== false", v-model="portCopy", :placeholder="((placeholder) ? '8080' : '')", @paste="paste($event)", @focus="portFocus", @keydown="portKeydown", @blur="blur", ref="portSegment").port
 </template>
 
@@ -189,12 +189,6 @@
             ipFocus(index) {
 
                 this.active = true;
-
-                // Clear it
-                this.ipCopy[index] = '';
-
-                // Update the change
-                this.changed();
 
             },
 
